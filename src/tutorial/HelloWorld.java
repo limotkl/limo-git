@@ -11,6 +11,10 @@ public class HelloWorld extends ActionSupport  implements RequestAware
     /**
 	 *
 	 */
+<<<<<<< HEAD
+=======
+	private static final long serialVersionUID = 1L;
+>>>>>>> c4
 	public void setRequest(Map<String, Object> map) {
 		  this.map = map;
 	}

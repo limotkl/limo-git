@@ -1,6 +1,11 @@
 package com.company.listener;
 
 import javax.servlet.ServletContextEvent;
+<<<<<<< HEAD
+=======
+import javax.servlet.ServletContextListener;
+import javax.servlet.http.HttpSessionAttributeListener;
+>>>>>>> c4
 import javax.servlet.http.HttpSessionBindingEvent;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
