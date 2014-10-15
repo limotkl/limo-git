@@ -1,21 +1,17 @@
-package tutorial;  
-import com.opensymphony.xwork2.ActionSupport;  
+package tutorial;
+import com.opensymphony.xwork2.ActionSupport;
 
 import javax.servlet.http.*;
 
 import java.util.ArrayList;
-import java.util.Map;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+i
 
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.RequestAware;
-public class HelloWorld extends ActionSupport  implements RequestAware 
-{  
+public class HelloWorld extends ActionSupport  implements RequestAware
+{
     /**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	Map<String, Object> map;
@@ -31,7 +27,7 @@ public class HelloWorld extends ActionSupport  implements RequestAware
     	this.Author = Author;
     }
     public String execute(){
-    	request = ServletActionContext.getRequest(); 
+    	request = ServletActionContext.getRequest();
     	Author=request.getParameter("Author");
     	//System.out.println("!!!!!");
     	if(Find(Author))
@@ -68,7 +64,7 @@ public class HelloWorld extends ActionSupport  implements RequestAware
     			System.out.println("empty");
     			res1 = st.executeQuery("select * from author");
     		}
-    		else 
+    		else
     			res1 = st.executeQuery("select * from author where name ='" + Author +"'");
     	}catch (Exception e) {
     		System.out.print("连接错误4！");
@@ -98,7 +94,7 @@ public class HelloWorld extends ActionSupport  implements RequestAware
     		}
     		System.out.println("cnt2:"+cnt);
     		map.put("ls", ls);
-    		
+
     	} catch (Exception e) {
     		System.out.print("连接错误5！");
     		e.printStackTrace();
@@ -106,4 +102,4 @@ public class HelloWorld extends ActionSupport  implements RequestAware
     	System.out.println("ls:"+ls.size());
     	return flag;
     }
-}  
+}
