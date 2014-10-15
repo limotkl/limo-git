@@ -6,16 +6,11 @@ import javax.servlet.http.*;
 import java.util.ArrayList;
 i
 
-import org.apache.struts2.ServletActionContext;
-import org.apache.struts2.interceptor.RequestAware;
 public class HelloWorld extends ActionSupport  implements RequestAware
 {
     /**
 	 *
 	 */
-	private static final long serialVersionUID = 1L;
-	Map<String, Object> map;
-	HttpServletRequest request=null;
 	public void setRequest(Map<String, Object> map) {
 		  this.map = map;
 	}
